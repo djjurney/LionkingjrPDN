@@ -6,7 +6,44 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lion King Jr.</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 20px;
+            background: orange;
+            user-select: none;
+        }
+        [type=radio] {
+            display: none;
+        }
+        #slider {
+            height: 35vm;
+            position: relative;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        #slider label {
+            margin: auto;
+            width: 60%;
+            height: 100%;
+            border-radius: 4px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            cursor: pointer;
+            transition: transform .4s ease;
+        }
+        #s1:checked ~ #slide4 #s2:checked ~ slide5,
+        #s3:checked ~ #slide1 #s4:checked ~ slide2,
+        #s5:checked ~ #slide3{
+            box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+            transform: translate3d(-30%,0,-200px);
+        }
 
+    </style>
 
 
 </head>
@@ -19,12 +56,12 @@
     <input type="radio" name="slider" id="s1">
         <input type="radio" name="slider" id="s2">
             <input type="radio" name="slider" id="s3" checked>
-                <input type="radio" name="slider" id="s4">
-                    <input type="radio" name="slider" id="s5">
+                <input type="radio" name="slider" id="s4" checked>
+                    <input type="radio" name="slider" id="s5" checked>
 
 </section>
     <label for="s1" id="slide1">
-        <img src="./photos/lionkingjr%20heading.png" height="600%" width="600%">
+        <img src="./photos/lionkingjr%20heading.png" height="100%" width="100%">
     </label>
 
     <label for="s2" id="slide2">
@@ -43,43 +80,6 @@
         <img src="./photos/20230119_141546.jpg" height="100%" width="100%">
     </label>
 
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        padding: 20px;
-        background: orange;
-        user-select: none;
-    }
-    [type=radio] {
-        display: none;
-    }
-    #slider {
-        height: 35vm;
-        position: relative;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-    }
-    #slider label {
-        margin: auto;
-        width: 60%;
-        height: 100%;
-        border-radius: 4px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        cursor: pointer;
-        transition: transform .4s ease;
-    }
-    #s1:checked ~ #slide4, #s2:checked ~ slide5,
-    #s3:checked ~ #slide1, #s4:checked ~ slide2,
-    #s5:checked ~ #slide3 {
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0,.37);
-        transform: translate3d(-30%,0,-200px);
-    }
 
-</style>
 </body>
 </html>
